@@ -1,6 +1,7 @@
 package com.gomefinance.hl.security;
 
 import com.gomefinance.hl.security.common.BaseMapper;
+import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +19,9 @@ import javax.sql.DataSource;
 @SpringBootApplication
 //@EnableWebMvc  //不需要加此注解，否则会出现500 servlet解析jsp页面失败
 // 这里要特别注意，不要把BaseMapper放到 basePackage 中，也就是不能同其他Mapper一样被扫描到。
-@MapperScan(basePackages = "com.gomefinance.hl.security.*" , markerInterface = BaseMapper.class)
+@MapperScan(basePackages = "com.gomefinance.hl.security.*", markerInterface = BaseMapper.class)
 @ImportResource(value = {"classpath:spring-framework-security_Remember.xml"})
+@EnableAdminServer
 public class Application {
 
     private static final Logger log = LoggerFactory.getLogger(Application.class);
@@ -34,7 +36,6 @@ public class Application {
         log.info(" spring-web-security 项目启动完成，spring-boot结束");
 
     }
-
 
 
     /**

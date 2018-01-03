@@ -6,7 +6,7 @@
         <properties>
         	<!--日志文件储存的目录  -->
             <!-- <property name="LOG_HOME">${sys:catalina.home}/logs/om_error</property> --> 
-            <property name="LOG_HOME">../logs/om_error</property>
+            <property name="LOG_HOME">logs/om_error</property>
             <property name="ERROR_FILE_NAME">om_error</property>  
             <!--设定日志输出的具体格式  -->
             <!--%-5p(日志级别) | %d(日期) | bt-v1.0 | [%t(线程名称)-%T(线程号)] (%c{1.}(简化全类名):%L(行号)) | %m(日志信息)%n(换行)  -->
